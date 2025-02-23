@@ -31,4 +31,11 @@ python train.py \
     --weight_decay 0.005 \
     --streaming True \
     --report_to "wandb" \
-    --run_name "s2v2-bert-eu"
+    --run_name "s2v2-bert-eu" \
+    --metric_for_best_model "wer" \
+    --greater_is_better False \
+    --load_best_model_at_end \
+    --do_train \
+    --do_eval \
+    --predict_with_generate \
+    --do_normalize_eval
